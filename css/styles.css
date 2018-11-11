@@ -20,6 +20,8 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    opacity: 0.2;
+    transition: 0.5s;
 }
 
 .wrapper > * {
@@ -33,7 +35,7 @@ html, body {
     text-align: center;
 }
 
-.wrapper h1 {
+.wrapper .me {
     margin: 5vh 0;
     color: #945d60;
 }
@@ -54,6 +56,10 @@ html, body {
     text-decoration: none;
     color: #af473c;
     font-weight: 600;
+}
+
+.wrapper .slash {
+    font-size: 17px;
 }
 
 .logo-box {
@@ -140,12 +146,12 @@ ul {
 @media screen and (min-width: 700px) {
     .wrapper {
         display: grid;
-        grid-template-columns: 2fr 3fr;
+        grid-template-columns: 3fr 2fr;
     }
     
     .wrapper > * {
-        grid-column: 2/3;
-        justify-self: end;
+        grid-column: 1/2;
+        justify-self: start;
         
     }
     
@@ -166,13 +172,17 @@ ul {
     .wrapper .contact,
     .wrapper .contact-desc,
     .wrapper .contact-list {
-        margin-right: 6%;
+        margin-left: 6%;
     }
     
+    .wrapper .job {
+        grid-row: 2/3
+    }
     
     .wrapper .photo-me {
-        grid-column: 1/2;
-        justify-self: end;
+        grid-column: 2/3;
+        grid-row: 3/4;
+        justify-self: start;
     }
     
     .wrapper p, 
@@ -186,14 +196,19 @@ ul {
     }
     
     .wrapper .projects-list {
-        text-align: right;
+        text-align: center;
     }
     
     .logo-box {
         max-width: 400px;
     }
     
+    .wrapper .tech-list,
     .wrapper .contact-list {
-        width: 30%;
+        width: 80%;
     }
+}
+
+.show-me {
+    opacity: 1;
 }
