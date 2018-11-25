@@ -39,7 +39,7 @@ html, body {
 
 .wrapper p,
 .wrapper ul {
-  max-width: 80%;
+  width: 80%;
   text-align: justify;
 }
 
@@ -141,7 +141,7 @@ ul {
 @media screen and (min-width: 700px) {
   .wrapper {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 2fr 3fr;
   }
 
   .wrapper > * {
@@ -153,6 +153,10 @@ ul {
     padding-left: 4%;
   }
 
+  .wrapper h3 {
+    justify-self: center;
+  }
+
   .wrapper .job {
     grid-row: 2/3;
   }
@@ -160,7 +164,7 @@ ul {
   .wrapper .photo-me {
     grid-column: 2/3;
     grid-row: 3/5;
-    justify-self: start;
+    justify-self: center;
   }
 
   .wrapper p,
@@ -170,7 +174,7 @@ ul {
   }
 
   .wrapper .about-me {
-    width: 80%;
+    width: 100%;
   }
 
   .wrapper .projects-list {
@@ -181,9 +185,11 @@ ul {
     max-width: 400px;
   }
 
-  .wrapper .tech-list,
+  .wrapper p,
+.wrapper ul.projects-list,
+.wrapper .tech-list,
 .wrapper .contact-list {
-    width: 80%;
+    width: 100%;
   }
 }
 
