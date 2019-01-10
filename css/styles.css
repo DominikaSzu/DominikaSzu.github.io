@@ -83,6 +83,10 @@ ul {
   list-style: none;
 }
 
+.dog-project {
+  color: #4B6663;
+}
+
 .tech-list, .contact-list {
   display: flex;
   flex-direction: row;
@@ -95,7 +99,8 @@ ul {
   transition: all 0.3s;
 }
 
-.wrapper .tech-list li img.jquery-logo {
+.wrapper .tech-list li img.jquery-logo,
+.wrapper .tech-list li img.bootstrap-logo {
   width: 40px;
 }
 
@@ -165,6 +170,12 @@ ul {
     grid-column: 2/3;
     grid-row: 3/5;
     justify-self: center;
+  }
+
+  .wrapper p,
+.wrapper .tech-list,
+.wrapper .contact-list {
+    max-width: 500px;
   }
 
   .wrapper .about-me {
