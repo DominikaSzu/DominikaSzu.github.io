@@ -83,10 +83,6 @@ ul {
   list-style: none;
 }
 
-.dog-project {
-  color: #4B6663;
-}
-
 .tech-list, .contact-list {
   display: flex;
   flex-direction: row;
