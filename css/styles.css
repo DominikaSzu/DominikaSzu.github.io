@@ -168,12 +168,6 @@ ul {
     justify-self: center;
   }
 
-  .wrapper p,
-.wrapper .tech-list,
-.wrapper .contact-list {
-    max-width: 500px;
-  }
-
   .wrapper .about-me {
     width: 100%;
   }
