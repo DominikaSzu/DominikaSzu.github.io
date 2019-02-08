@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins|Ubuntu");
 * {
   margin: 0;
   padding: 0;
@@ -21,115 +22,75 @@ html, body {
   align-items: center;
   justify-content: space-evenly;
 }
+.wrapper > * {
+  margin: 10px;
+}
 .wrapper .me {
   margin: 5vh 0;
   color: #945d60;
 }
-
-.wrapper > * {
-  margin: 10px;
+.wrapper .slash {
+  font-size: 17px;
 }
-
-.wrapper h1,
-.wrapper h2,
-.wrapper h3,
-.wrapper h4 {
+.wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4 {
   text-align: center;
 }
-
-.wrapper p,
-.wrapper ul {
+.wrapper p, .wrapper ul {
   width: 80%;
   text-align: justify;
 }
-
+.wrapper ul {
+  list-style: none;
+}
 .wrapper .photo-me {
   border-radius: 50%;
   width: 80%;
   max-width: 315px;
 }
-
 .wrapper .now-desc a {
   text-decoration: none;
   color: #af473c;
   font-weight: 600;
 }
-
-.wrapper .slash {
-  font-size: 17px;
-}
-
-.logo-box {
+.wrapper .logo-box {
   width: 85%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.logo-box .logo-img {
+.wrapper .logo-box .logo-img {
   max-width: 90px;
   min-width: 60px;
 }
-
-.projects-list li {
-  text-align: center;
-}
-.projects-list li ul {
-  display: flex;
-  justify-content: space-around;
-  margin: auto;
-}
-
-ul {
-  list-style: none;
-}
-
-.tech-list, .contact-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 80%;
-}
-
-.wrapper .tech-list li svg {
-  font-size: 40px;
-  transition: all 0.3s;
-}
-
-.wrapper .tech-list li img.jquery-logo,
-.wrapper .tech-list li img.bootstrap-logo {
-  width: 40px;
-}
-
-.wrapper .contact-list a svg {
-  font-size: 30px;
-  transition: all 0.3s;
-}
-
-.wrapper .contact-list a svg:hover {
-  color: #945d60;
-}
-
-.wrapper .projects-list li ul li svg {
-  font-size: 25px;
-}
-
-.wrapper .projects-list li ul li a {
-  color: black;
-  transition: all 0.3s;
-}
-
-.wrapper .projects-list li ul li a:hover {
-  color: #945d60;
-}
-
 .wrapper .projects-list li {
+  text-align: center;
   margin-bottom: 15px;
 }
 .wrapper .projects-list li p {
   text-align: justify;
   margin: 10px auto;
 }
-
+.wrapper .projects-list li ul {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+.wrapper .projects-list li ul li svg {
+  font-size: 25px;
+}
+.wrapper .projects-list li ul li a {
+  color: black;
+  transition: all 0.3s;
+}
+.wrapper .projects-list li ul li a:hover {
+  color: #945d60;
+}
+.wrapper .tech-list li svg {
+  font-size: 40px;
+}
+.wrapper .tech-list li img.jquery-logo, .wrapper .tech-list li img.bootstrap-logo {
+  width: 40px;
+}
 .wrapper .contact-list {
   width: 40%;
   margin-bottom: 25px;
@@ -138,48 +99,45 @@ ul {
   text-decoration: none;
   color: black;
 }
+.wrapper .contact-list a svg {
+  font-size: 30px;
+  transition: all 0.3s;
+}
+.wrapper .contact-list a svg:hover {
+  color: #945d60;
+}
+
+.tech-list, .contact-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+}
 
 @media screen and (min-width: 700px) {
   .wrapper {
     display: grid;
     grid-template-columns: 2fr 3fr;
+    padding-left: 4%;
   }
-
   .wrapper > * {
     grid-column: 1/2;
     justify-self: start;
   }
-
-  .wrapper {
-    padding-left: 4%;
-  }
-
-  .wrapper h3 {
-    justify-self: center;
-  }
-
   .wrapper .job {
     grid-row: 2/3;
   }
-
   .wrapper .photo-me {
     grid-column: 2/3;
     grid-row: 3/5;
     justify-self: center;
   }
-
-  .wrapper .about-me {
-    width: 100%;
+  .wrapper h3 {
+    justify-self: center;
   }
-
-  .wrapper .projects-list {
-    text-align: center;
-  }
-
-  .wrapper p,
-.wrapper ul.projects-list,
-.wrapper .tech-list,
-.wrapper .contact-list {
+  .wrapper .about-me, .wrapper p, .wrapper ul.projects-list,
+.wrapper .tech-list, .wrapper .contact-list {
     width: 100%;
   }
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins|Ubuntu');
+
 $title-brown: #945d60;
 
 * {
@@ -22,168 +24,152 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    
+    > * {
+        margin: 10px;
+    }
+
     .me {
         margin: 5vh 0;
-    color: $title-brown;
+        color: $title-brown;
     }
-}
-
-.wrapper > * {
-    margin: 10px;
-}
-
-.wrapper h1,
-.wrapper h2,
-.wrapper h3,
-.wrapper h4 {
-    text-align: center;
-}
-
-.wrapper p,
-.wrapper ul {
-    width: 80%;
-    text-align: justify;
-}
-
-.wrapper .photo-me {
-    border-radius: 50%;
-    width: 80%;
-    max-width: 315px;
-}
-
-.wrapper .now-desc a {
-    text-decoration: none;
-    color: #af473c;
-    font-weight: 600;
-}
-
-.wrapper .slash {
-    font-size: 17px;
-}
-
-.logo-box {
-    width: 85%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    .logo-img {
-        max-width: 90px;
-        min-width: 60px;
+    
+    .slash {
+        font-size: 17px;
     }
-}
 
-.projects-list li {
-    text-align: center;
+    h1, h2, h3, h4 {
+        text-align: center;  
+    }
+
+    p, ul {
+        width: 80%;
+        text-align: justify;
+    }
+    
     ul {
-       display: flex;
-        justify-content: space-around;
-        margin: auto; 
+        list-style: none;
     }
-}
+    
+    .photo-me {
+        border-radius: 50%;
+        width: 80%;
+        max-width: 315px;
+    }
+    
+    .now-desc a {
+        text-decoration: none;
+        color: #af473c;
+        font-weight: 600;
+    }
+    
+    .logo-box {
+        width: 85%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        .logo-img {
+            max-width: 90px;
+            min-width: 60px;
+        }
+    }
+    
+    .projects-list li {
+        text-align: center;
+        margin-bottom: 15px;
+        
+        p {
+            text-align: justify;
+            margin: 10px auto;
+        }
 
-ul {
-    list-style: none;
+        ul {
+            display: flex;
+            justify-content: space-around;
+            margin: auto; 
+
+            li svg {
+                font-size: 25px;
+            }
+
+            li a {
+                color: black;
+                transition: all 0.3s;
+                
+                &:hover {
+                    color: $title-brown;
+                }
+            }
+        }
+    }
+    
+    .tech-list li {
+        svg {
+            font-size: 40px;
+        }
+
+        img.jquery-logo, img.bootstrap-logo {
+            width: 40px;
+        }
+    }
+
+    .contact-list {
+    width: 40%;
+    margin-bottom: 25px;
+    
+        li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a svg {
+        font-size: 30px;
+        transition: all 0.3s;
+        
+            &:hover {
+                color: $title-brown;
+            }
+        }
+    }  
 }
 
 .tech-list, .contact-list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     width: 80%;
 }
-
-.wrapper .tech-list li svg {
-    font-size: 40px;
-    transition: all 0.3s;
-}
-
-.wrapper .tech-list li img.jquery-logo,
-.wrapper .tech-list li img.bootstrap-logo {
-    width: 40px;
-}
-
-.wrapper .contact-list a svg {
-    font-size: 30px;
-    transition: all 0.3s;
-}
-
-.wrapper .contact-list a svg:hover {
-    color: $title-brown;
-}
-
-.wrapper .projects-list li ul li svg {
-    font-size: 25px;
-}
-
-.wrapper .projects-list li ul li a {
-    color: black;
-    transition: all 0.3s;
-}
-
-.wrapper .projects-list li ul li a:hover {
-    color: $title-brown;
-}
-
-.wrapper .projects-list li {
-    margin-bottom: 15px;
-    p {
-        text-align: justify;
-        margin: 10px auto;
-    }
-}
-
-.wrapper .contact-list {
-    width: 40%;
-    margin-bottom: 25px;
-    li a {
-        text-decoration: none;
-        color: black;
-    }
-}
-
 
 @media screen and (min-width: 700px) {
     .wrapper {
         display: grid;
         grid-template-columns: 2fr 3fr;
-    }
-    
-    .wrapper > * {
-        grid-column: 1/2;
-        justify-self: start;
-        
-    }
-    
-    .wrapper {
         padding-left: 4%;
-    }
+        
+        > * {
+            grid-column: 1/2;
+            justify-self: start;    
+        }  
+        
+        .job {
+            grid-row: 2/3
+        }
+        
+        .photo-me {
+            grid-column: 2/3;
+            grid-row: 3/5;
+            justify-self: center;
+        }
+        
+        h3 {
+            justify-self: center;
+        }
 
-    .wrapper h3 {
-        justify-self: center;
-    }
-    
-    .wrapper .job {
-        grid-row: 2/3
-    }
-    
-    .wrapper .photo-me {
-        grid-column: 2/3;
-        grid-row: 3/5;
-        justify-self: center;
-    }
-    
-    .wrapper .about-me {
-        width: 100%;
-    }
-    
-    .wrapper .projects-list {
-        text-align: center;
-    }
-    
-    .wrapper p,
-    .wrapper ul.projects-list,
-    .wrapper .tech-list, 
-    .wrapper .contact-list {
-        width: 100%;
-    }
+        .about-me, p, ul.projects-list,
+        .tech-list, .contact-list {
+            width: 100%;
+        }
+    } 
 }
