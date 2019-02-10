@@ -141,5 +141,17 @@ html, body {
     width: 100%;
   }
 }
+@media screen and (max-width: 745px) {
+  .tech-list li {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+@media screen and (min-width: 746px) and (max-width: 880px) {
+  .tech-list li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
